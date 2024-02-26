@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Sudoku.Solver\**" />
+    <EmbeddedResource Remove="Sudoku.Solver\**" />
+    <None Remove="Sudoku.Solver\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.12" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sudoku.GeneticAlgorithm\Sudoku.GeneticAlgorithm.csproj" />
+    <ProjectReference Include="..\Sudoku.Backtracking\Sudoku.Backtracking.csproj" />
+    <ProjectReference Include="..\Sudoku.Choco\Sudoku.Choco.csproj" />
+    <ProjectReference Include="..\Sudoku.Shared\Sudoku.Shared.csproj" />
+    <ProjectReference Include="..\Sudoku.GrapheTheory\Sudoku.GrapheTheory.csproj" />
+    <ProjectReference Include="..\Sudoku.Z3\Sudoku.Z3.csproj" />
+    <ProjectReference Include="..\Sudoku.ChocSolv\Sudoku.ChocSolv.csproj" />
+  </ItemGroup>
+</Project>
